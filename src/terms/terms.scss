@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    background: url('https://storage.123fakturere.no/public/wallpapers/geiranger.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+    background-attachment: fixed;
+    &::-webkit-scrollbar {
+        display: none;
+      }
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none; 
+}
+.terms{
+    width: 100vw;
+    min-height: 100vh;
+    .nav{
+        padding-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 70%;
+        margin: auto;
+        @keyframes slideDown {
+            from {
+              height: 0px;
+            }
+            to {
+              height: 320px;
+            }
+          }
+        @keyframes slideUp {
+            from {
+              height: 320px;
+            }
+            to {
+              height: 0px;
+              display: none;
+            }
+          }
+        .menu {
+          @media (min-width: 1200px) {
+            display: none;
+          }
+          @media (max-width: 700px) {
+            left: 10%;
+          }
+           
+            position: absolute;
+            
+            top: 80px; // Adjust the top position as needed
+            left: 80px;
+            background-color: #fff; // Set the background color
+            padding: 10px;
+            // font-size: 1.5rem;
+            font-weight: 600;
+            overflow: hidden;
+            height: max-content;
+            &.open{
+                transition: height 0.5s linear;
+                display: flex;
+                flex-direction: column;
+                animation: slideDown 0.5s forwards;
+
+            }
+            &.closing {
+                transition: height 0.5s linear;
+                display: flex;
+                flex-direction: column;
+                animation: slideUp 0.5s forwards; // Use the slideUp keyframes when closing
+                // display: none; // Hide the menu by default
+              }
+            &.none{
+                display: none;
+            }
+            
+            span{
+                margin-bottom: 0.9rem;
+                margin-right: 9rem;
+                padding: 1rem;
+            }
+        }
+        &.menu-open {
+            .menu {
+              display: block;
+            }
+          }
+        .logo{
+            img{
+                @media (max-width: 1200px) {
+                    content: url('/assets/menu.png'); 
+                    height: 20px;
+                    filter: invert(100%);
+                  }
+                height: 2rem;
+                cursor: pointer;
+            }
+        }
+        .text{
+            display: flex;
+            font-family: sans-serif;
+            color: aliceblue;
+            font-weight: bold;
+            span{
+                @media (max-width: 1200px) {
+                    display: none;
+                  }
+                margin: 0 20px;
+                cursor: pointer;
+                &:hover{
+                    color: #d2d7db;
+                }
+            }
+            .lang {
+                span:hover{
+                    color: aliceblue;
+                }
+                @media (max-width: 1200px) {
+                  span {
+                    display: inline-block;
+                  }
+                }
+              }
+            div{
+                display: flex;
+                align-items: center;
+                img{
+                    height: 18px;
+                    border-radius: 4px;
+                    cursor: pointer;
+                }
+            }
+            .langtoggle{
+                position: absolute;
+                top: 80px; // Adjust the top position as needed
+                right: 15%;
+                background-color: #fff;
+                color: black;
+                display: flex;
+                flex-direction: column;
+                border-radius: 10px;
+                font-weight: 400;
+                font-size: 0.9rem;
+                padding: 10px 0;
+                .lang{
+                    padding: 12px 5px;
+                    padding-right: 10px;
+                    span{
+                        padding: 0;
+                        margin: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+    .content{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1{
+            color: aliceblue;
+            margin-top: 5rem;
+            width: 100%;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        button{
+            border: none;
+            cursor: pointer;
+            background-color: #089e1e;
+            font-size: 1.125rem;
+            color: aliceblue;
+            font-weight: 700;
+            padding: 1rem 2.5rem;
+            border-radius: 30px;
+            width: fit-content;
+            margin: 1.25rem;
+
+        }
+        .termsbody{
+            @media (max-width: 800px){
+                width: 70%;
+
+                margin: 0.25rem;
+            }
+            width: 750px;
+            background: white;
+            min-height: 800px;
+            border-radius: 20px;
+            margin: 1.25rem;
+            padding: 2.5rem;
+            font-size: 14px;
+            text-align: center;
+            
+        }
+    }
+}

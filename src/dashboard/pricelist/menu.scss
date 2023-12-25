@@ -1,0 +1,36 @@
+h3{
+    text-align: center;
+    font-weight: 400;
+    padding: 10px ;
+}
+hr{
+    width: 70%;
+    border: none;
+    border-bottom: 2px solid;
+    border-color: hsl(209.45deg 69.69% 70.39%);
+    margin-bottom: 20px;
+    margin: 0;
+    margin: auto;
+    padding: 0;
+    background: transparent;
+}
+.menuitem{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    .dot{
+        height: 10px;
+        width: 10px;
+        // background-color: black;
+        border-radius: 50%;
+        margin: 5px;
+        &.active{
+            background-color: hsl(130.71deg 94.23% 40.78%);
+        }
+    }
+    img{
+        height: 20px;
+        padding: 5px 10px;
+    }
+}
