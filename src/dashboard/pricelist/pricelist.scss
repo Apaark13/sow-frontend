@@ -158,6 +158,10 @@
     display: flex;
     justify-content: center;
     max-height: calc(100vh - 180px);
+    @media (max-width:1200px){
+        max-height: calc(100vh - 163px);
+
+    }
     overflow-y: auto;
     position: relative;
     //   /* Hide scrollbar for IE, Edge and Firefox */ 
