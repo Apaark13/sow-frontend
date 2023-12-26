@@ -21,7 +21,6 @@ interface RowType {
 
 const Table: React.FC<TableProps> = ({ /* destructure any additional props here */ }) => {
   const [data, setData] = useState([]);
-  const arr: RowType[] = data;
   useEffect(() => {
     fetch("http://localhost:8000/api/pricelist")
       .then((response) => response.json())

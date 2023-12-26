@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import PriceList from "./dashboard/pricelist/Pricelist"
 import Terms from "./terms/Terms"
 // const Terms: React.FC = () => (
