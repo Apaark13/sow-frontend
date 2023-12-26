@@ -5,10 +5,23 @@ import "./table.scss"
 interface TableProps {
   // You can define additional props as needed
 }
+interface RowType {
+  article_no: number;
+  product_name: string;
+  inprice: number;
+  price: number;
+  unit: string;
+  instock: number;
+  description: string;
+  // Add other properties as needed
+}
+
+// Assuming data is an array of RowType
 
 
 const Table: React.FC<TableProps> = ({ /* destructure any additional props here */ }) => {
-    const [data, setData] = useState([]);
+  const [data, setData] = useState([]);
+  const arr: RowType[] = data;
   useEffect(() => {
     fetch("http://localhost:8000/api/pricelist")
       .then((response) => response.json())
@@ -40,7 +53,7 @@ const Table: React.FC<TableProps> = ({ /* destructure any additional props here 
       </thead>
       <tbody>
         {/* Add your table rows here */}
-        {data.map((row, index) => (
+        {data.map((row: RowType, index: number) => (
           <tr key={index}>
             <td >{index==6?<img src="/assets/next.png" alt="" />: ""}</td>
             <td className="mobile">{row.article_no}</td>
