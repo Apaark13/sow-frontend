@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import PriceList from "./dashboard/pricelist/Pricelist"
 import Terms from "./terms/Terms"
+import "./app.scss"
 // const Terms: React.FC = () => (
 //   <div>
 //     <h2>Terms</h2>
@@ -18,7 +19,7 @@ import Terms from "./terms/Terms"
 
 const App: React.FC = () => (
   <Router>
-    <div>
+    <div className="app">
 
       {/* <Link to="/terms">terms</Link>
       <Link to="/dashboard/pricelist">dashboard/pricelist</Link> */}
