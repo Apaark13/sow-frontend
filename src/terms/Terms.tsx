@@ -17,7 +17,7 @@ const Terms = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/terms/")
+    fetch("https://sow-gdch.onrender.com/api/terms/")
       .then((response) => response.json())
       .then((data) => {
         // console.log(data[0].content);

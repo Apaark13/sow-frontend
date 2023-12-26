@@ -22,7 +22,7 @@ interface RowType {
 const Table: React.FC<TableProps> = ({ /* destructure any additional props here */ }) => {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:8000/api/pricelist")
+    fetch("https://sow-gdch.onrender.com/api/pricelist/")
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
