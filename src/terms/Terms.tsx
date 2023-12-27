@@ -122,7 +122,7 @@ const Terms = () => {
         <button>Close and Go Back</button>
         <div className="termsbody">
           {
-            window.innerWidth
+            // window.innerWidth
             /*
           inner: {innerHeight}
           <br /> */}
