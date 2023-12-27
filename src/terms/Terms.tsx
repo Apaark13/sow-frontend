@@ -121,8 +121,9 @@ const Terms = () => {
         <h1>Terms</h1>
         <button>Close and Go Back</button>
         <div className="termsbody">
-          {/* outer: {outerHeight}
-            <br />
+          {
+            window.innerWidth
+            /*
           inner: {innerHeight}
           <br /> */}
           {data}
